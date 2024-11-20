@@ -6,10 +6,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "keywords": ["apexcura", "icons", "svg", "className"],
+  "author": "Apex Cura <hello@apexcura.com>",
+  "license": "MIT",
+  "description": "Apexcura Icons is a versatile icon library built for seamless integration into modern web applications. It uses a class-based system to provide a collection of scalable, customizable icons that enhance the UI design. With support for dynamic styles and easy customization, Apexcura Icons ensures flexibility and ease of use.",
   "devDependencies": {
     "@babel/core": "^7.26.0",
     "@babel/preset-env": "^7.26.0",
