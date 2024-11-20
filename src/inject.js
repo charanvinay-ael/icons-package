@@ -17,7 +17,12 @@ export const injectIcons = () => {
       const hasStaticSizeClass = element.classList.contains(staticSizeClass);
 
       if (!hasColorClass) {
-        svgWithClasses = svgWithClasses.replace(/fill="[^"]*"/g, 'fill="currentColor"');
+        // svgWithClasses = svgWithClasses.replace(/fill="[^"]*"/g, 'fill="currentColor"');
+        const skipColors = ['white'];
+
+        svgWithClasses = svgWithClasses.replace(/fill="([^"]*)"/g, (match, fillValue) => 
+          skipColors.includes(fillValue) ? match : 'fill="currentColor"'
+        );
       }
 
       if (hasStaticSizeClass) {
