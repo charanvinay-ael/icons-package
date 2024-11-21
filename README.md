@@ -34,12 +34,14 @@ Below is a list of all available icons and their corresponding class names:
 | Code Snippet     | `aci-code-snippet`   | `<i className="aci aci-code-snippet"></i>` |
 | Dashboard        | `aci-dashboard`      | `<i className="aci aci-dashboard"></i>` |
 | Magnet Lead      | `aci-magnet-lead`    | `<i className="aci aci-magnet-lead"></i>` |
+| Mail             | `aci-mail`           | `<i className="aci aci-mail"></i>` |
 | Mega Phone       | `aci-mega-phone`     | `<i className="aci aci-mega-phone"></i>` |
 | Settings         | `aci-settings`       | `<i className="aci aci-settings"></i>` |
 | Shield           | `aci-shield`         | `<i className="aci aci-shield"></i>` |
 | Report           | `aci-report`         | `<i className="aci aci-report"></i>` |
 | User Clock       | `aci-user-clock`     | `<i className="aci aci-user-clock"></i>` |
 | User Group       | `aci-user-group`     | `<i className="aci aci-user-group"></i>` |
+| Whatsapp(Solid)  | `aci-whatsapp-solid` | `<i className="aci aci-whatsapp-solid"></i>` |
 
 ### Special Class Names
 
