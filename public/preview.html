@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Icon Preview</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    h1{
+        margin: 0;
+    }
+    .icon-container {
+        margin: 40px 0;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      align-items: stretch;
+      gap: 20px;
+    }
+    .icon {
+        margin-bottom: 5px;
+    }
+    .icon-name {
+        font-size: 12px;
+        color: gray;
+    }
+    .icon-item {
+      text-align: center;
+      border: 1px solid gainsboro;
+      padding: 20px 10px;
+      border-radius: 5%;
+      cursor: pointer;
+      transition: background-color 0.3s, box-shadow 0.3s;
+    }
+    .icon-item:hover {
+      background-color: #f9f9f9;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body>
+  <h1>ApexCura Icons</h1>
+  <small>(Click on any card to copy the classname)</small>
+  <div class="icon-container" id="icon-container"></div>
+  
+  <script type="module">
+    import { icons } from "../src/icons.js";
+
+    const container = document.getElementById('icon-container');
+
+    // Render icons
+    Object.entries(icons).forEach(([className, svg]) => {
+      const item = document.createElement('div');
+      item.className = 'icon-item';
+      item.dataset.class = className; // Store class name in data attribute
+      item.innerHTML = `
+        <div class="icon">${svg}</div>
+        <div class="icon-name">${className}</div>
+      `;
+      container.appendChild(item);
+    });
+
+    // Add click event listener to the container
+    container.addEventListener('click', (e) => {
+      const iconItem = e.target.closest('.icon-item'); // Find closest .icon-item
+      if (iconItem) {
+        const className = iconItem.dataset.class;
+        navigator.clipboard.writeText(className).then(() => {
+          alert(`Copied: ${className}`);
+        });
+      }
+    });
+  </script>
+</body>
+</html>
