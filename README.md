@@ -1,5 +1,5 @@
 
-# Apexcura Icons
+# ApexCura Icons
 
 **Apexcura Icons** is a lightweight and customizable icon library designed for modern web applications. With a simple class-based approach, you can easily integrate and use the icons in your project.
 
