@@ -20,8 +20,8 @@ export const injectIcons = () => {
         // svgWithClasses = svgWithClasses.replace(/fill="[^"]*"/g, 'fill="currentColor"');
         const skipColors = ['white'];
 
-        svgWithClasses = svgWithClasses.replace(/fill="([^"]*)"/g, (match, fillValue) => 
-          skipColors.includes(fillValue) ? match : 'fill="currentColor"'
+        svgWithClasses = svgWithClasses.replace(/(fill|stroke)="([^"]*)"/g, (match, attr, value) =>
+          value === 'none' || skipColors.includes(value) ? match : `${attr}="currentColor"`
         );
       }
 
